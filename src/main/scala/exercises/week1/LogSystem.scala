@@ -1,6 +1,14 @@
 package ru.meklaw
 package exercises.week1
 
+object LogSystem {
+  def main(args: Array[String]): Unit = {
+    val logger = new Logger
+    logger.info.print
+    logger.info(3).print
+    logger.info.info.info.print
+  }
+}
 
 class Logger(val msgNum: Int = 0) {
   def info(): Logger = {
@@ -13,5 +21,5 @@ class Logger(val msgNum: Int = 0) {
     else info().info(n - 1)
   }
 
-  def print = println(msgNum)
+  def print(): Unit = println(msgNum)
 }
