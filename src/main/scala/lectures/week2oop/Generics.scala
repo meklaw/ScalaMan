@@ -4,7 +4,7 @@ package lectures.week2oop
 object Generics {
   def main(args: Array[String]): Unit = {
     def countSum(nums: List[Int]): Int = nums.sum
-    def countSum[A: Numeric](nums: List[A]): A = nums.sum
+    def countSum2[A: Numeric](nums: List[A]): A = nums.sum
     def count[A](nums: List[A]): Int = nums.size
     /*в качестве обобщенного типа подойдет любая заглавная буква алфавита A, B, C, T, ...
     * обобщения применяются к класса и трейтам, но не к объектам
