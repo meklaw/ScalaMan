@@ -76,9 +76,14 @@ object Collections {
 
     //    Tuple - содержит элементы разных типов (размера от 1 до 22)
     val aTuple: (Int, String) = (100, "Scala")
+    val (num, str) = aTuple
+    val (_, str2) = aTuple
 
     println(aTuple._1)
+    println(num)
     println(aTuple._2)
+    println(str)
+    println(str2)
 
     val copy: (String, Int) = aTuple.copy(_2 = "Kotlin").swap
 
